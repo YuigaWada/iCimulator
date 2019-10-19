@@ -1,0 +1,11 @@
+framework module iCimulator {
+  umbrella header "iCimulator.h"
+
+  export *
+  module * { export * }
+}
+
+module iCimulator.Swift {
+    header "iCimulator-Swift.h"
+    requires objc
+}

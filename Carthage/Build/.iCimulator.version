@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2b17ca5f992afe385e197391dd83ca8e1cb7031d",
+  "iOS" : [
+    {
+      "name" : "iCimulator",
+      "hash" : "3349e7eb0a194b1f940966a6e73f12f336296852f2387c2efc0bac5b689f3136",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}
