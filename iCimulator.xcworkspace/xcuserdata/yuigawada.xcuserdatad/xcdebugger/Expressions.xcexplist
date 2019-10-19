@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "FakePreviewLayer.checkPreviewType():FakePreviewLayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cameraPreviewLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tappedChangeButton(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.isVideoMode">
+            </PersistentString>
+            <PersistentString
+               value = "titleLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in iCimulatorFoundation.shapeVideo(_:completion:):iCimulatorFoundation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "videoUrls[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.setupInputOutput():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentDevice">
+            </PersistentString>
+            <PersistentString
+               value = "captureSession">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: type(of: photoOutput))">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: type(of: captureSession))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FakePreviewLayer.init():FakePreviewLayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "previewType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.setupPreviewLayer():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cameraPreviewLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tapped():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "captureSession">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FakeImagePickerController.viewDidDisappear(_:):FakeImagePickerController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.cameraPreviewLayer ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FakeImagePickerController.setupPreviewLayer():FakeImagePickerController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cameraView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.fileOutput(_:didFinishRecordingTo:from:error:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "outputFileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "iCimulatorFoundation.mergeVideoBlocks(_:skip:completion:):iCimulatorFoundation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "videoUrls[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FakeImagePickerController.viewDidLoad():FakeImagePickerController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.modalPresentationStyle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tapGesture(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.photoOutput">
+            </PersistentString>
+            <PersistentString
+               value = "self.isVideoMode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VideoConverter.createFirst(_:):Utility.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in VideoConverter.finished(_:):Utility.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,4 @@
+{
+	Type = "Static-Image";
+	Argument = test;
+}
