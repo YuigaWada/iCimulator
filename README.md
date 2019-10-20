@@ -38,7 +38,7 @@ github "YuigaWada/iCimulator"
 ```
 
 #### Manually
-1. Download and drop ```PolioPager``` in your project.  
+1. Download and drop ```iCimulator``` in your project.  
 2. Congratulations!  
 
 <br><br>
@@ -148,7 +148,8 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
 
 ## Todo📒
 - [x] typealias対象のClass →互いに可換化
-- [ ] Carthageの準備
+- [x] Carthageの準備
+- [x] CocoaPodsの準備
 - [ ] 日本語版READMEの作成
 
 
