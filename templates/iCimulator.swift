@@ -44,6 +44,8 @@
     public typealias AVCaptureFileOutputRecordingDelegate = FakeCaptureFileOutputRecordingDelegate
     public typealias AVCaptureConnection = FakeCaptureConnection
     public typealias AVCapturePhotoSettings = FakeCapturePhotoSettings
+    public typealias AVCaptureResolvedPhotoSettings = FakeCaptureResolvedPhotoSettings
+
 
     //For supporting iOS 10.
     public typealias AVCaptureStillImageOutput = FakeCaptureStillImageOutput

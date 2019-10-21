@@ -108,7 +108,7 @@ open class _FakeCapturePhoto : NSObject {
 //    open func semanticSegmentationMatte(for semanticSegmentationMatteType: AVSemanticSegmentationMatte.MatteType) -> AVSemanticSegmentationMatte? {return nil}
     open var metadata: [String : Any] = ["":""]
     open var cameraCalibrationData: AVCameraCalibrationData?
-//    open var resolvedSettings: AVCaptureResolvedPhotoSettings
+    open var resolvedSettings: FakeCaptureResolvedPhotoSettings = FakeCaptureResolvedPhotoSettings()
     open var photoCount: Int = 1
     open var sourceDeviceType: FakeCaptureDevice.DeviceType?
 

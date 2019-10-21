@@ -12,13 +12,13 @@ import AVFoundation
 
 //-MARK: Protocol
 @objc public protocol FakeCapturePhotoCaptureDelegate: NSObjectProtocol {
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings)
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings)
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, willBeginCaptureFor resolvedSettings: FakeCaptureResolvedPhotoSettings)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, willCapturePhotoFor resolvedSettings: FakeCaptureResolvedPhotoSettings)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didCapturePhotoFor resolvedSettings: FakeCaptureResolvedPhotoSettings)
     @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishProcessingPhoto photo: FakeCapturePhoto, error: Error?)
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishRecordingLivePhotoMovieForEventualFileAt outputFileURL: URL, resolvedSettings: AVCaptureResolvedPhotoSettings)
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?)
-    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishRecordingLivePhotoMovieForEventualFileAt outputFileURL: URL, resolvedSettings: FakeCaptureResolvedPhotoSettings)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: FakeCaptureResolvedPhotoSettings, error: Error?)
+    @objc optional func photoOutput(_ output: FakeCapturePhotoOutput, didFinishCaptureFor resolvedSettings: FakeCaptureResolvedPhotoSettings, error: Error?)
 }
 
 @objc public protocol FakeCaptureFileOutputRecordingDelegate : NSObjectProtocol {
