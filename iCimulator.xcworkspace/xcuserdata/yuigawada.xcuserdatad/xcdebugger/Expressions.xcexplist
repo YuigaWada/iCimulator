@@ -14,10 +14,10 @@
          contextName = "ViewController.tappedChangeButton(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.isVideoMode">
+               value = "titleLabel.text">
             </PersistentString>
             <PersistentString
-               value = "titleLabel.text">
+               value = "self.isVideoMode">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,19 +30,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.setupInputOutput():ViewController.swift">
+         contextName = "closure #1 in VideoConverter.finished(_:):Utility.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentDevice">
-            </PersistentString>
-            <PersistentString
-               value = "captureSession">
-            </PersistentString>
-            <PersistentString
-               value = "String(describing: type(of: photoOutput))">
-            </PersistentString>
-            <PersistentString
-               value = "String(describing: type(of: captureSession))">
+               value = "self.url">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -63,6 +54,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "FakeImagePickerController.viewDidDisappear(_:):FakeImagePickerController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.cameraPreviewLayer ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.tapped():ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -71,10 +70,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FakeImagePickerController.viewDidDisappear(_:):FakeImagePickerController.swift">
+         contextName = "FakeImagePickerController.photoOutput(_:didFinishProcessingPhoto:error:):FakeImagePickerController.swift">
          <PersistentStrings>
             <PersistentString
-               value = " self.cameraPreviewLayer ">
+               value = "spyDelegate">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -130,10 +129,19 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in VideoConverter.finished(_:):Utility.swift">
+         contextName = "ViewController.setupInputOutput():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.url">
+               value = "currentDevice">
+            </PersistentString>
+            <PersistentString
+               value = "captureSession">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: type(of: photoOutput))">
+            </PersistentString>
+            <PersistentString
+               value = "String(describing: type(of: captureSession))">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

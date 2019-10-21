@@ -22,6 +22,11 @@
 		8DCAFC062359372500A7724C /* FakeCaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAFC052359372500A7724C /* FakeCaptureDevice.swift */; };
 		8DE563262359B2040064EA1E /* FakeCaptureStillImageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE563252359B2040064EA1E /* FakeCaptureStillImageOutput.swift */; };
 		8DE56328235A02510064EA1E /* FakeCaptureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56327235A02510064EA1E /* FakeCaptureConnection.swift */; };
+		8DF8B11B235D9EA90080573E /* _FakeImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B11A235D9EA90080573E /* _FakeImagePickerController.swift */; };
+		8DF8B11E235D9F140080573E /* _FakeCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B11D235D9F140080573E /* _FakeCaptureSession.swift */; };
+		8DF8B120235DA0420080573E /* _FakeCaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */; };
+		8DF8B122235DA29E0080573E /* _FakeCaptureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */; };
+		8DF8B127235DA3780080573E /* _FakeCaptureStillImageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B126235DA3780080573E /* _FakeCaptureStillImageOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		8DCAFC052359372500A7724C /* FakeCaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCaptureDevice.swift; sourceTree = "<group>"; };
 		8DE563252359B2040064EA1E /* FakeCaptureStillImageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCaptureStillImageOutput.swift; sourceTree = "<group>"; };
 		8DE56327235A02510064EA1E /* FakeCaptureConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCaptureConnection.swift; sourceTree = "<group>"; };
+		8DF8B11A235D9EA90080573E /* _FakeImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeImagePickerController.swift; sourceTree = "<group>"; };
+		8DF8B11D235D9F140080573E /* _FakeCaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureSession.swift; sourceTree = "<group>"; };
+		8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureDevice.swift; sourceTree = "<group>"; };
+		8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureConnection.swift; sourceTree = "<group>"; };
+		8DF8B126235DA3780080573E /* _FakeCaptureStillImageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureStillImageOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 		8D2762A4235B479C00E1E02E /* UIImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				8DF8B119235D9E7E0080573E /* Disguise */,
 				8D2762A5235B47DD00E1E02E /* FakeImagePickerController.swift */,
 				8D2762A7235B480000E1E02E /* FakeImagePickerController.xib */,
 			);
@@ -135,6 +146,7 @@
 		8DCE32F9235B311F00D9ECE8 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8DF8B11C235D9EF50080573E /* Disguise */,
 				8D4C6A322355416F00CF4E4E /* FakeCaptureSession.swift */,
 				8DB7C6492355D3F60032238F /* FakeCaptureOutput.swift */,
 				8DB7C64D23571F060032238F /* FakeCaptureDeviceInput.swift */,
@@ -149,9 +161,36 @@
 		8DE563242359B1F50064EA1E /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				8DF8B125235DA3690080573E /* Disguise */,
 				8DE563252359B2040064EA1E /* FakeCaptureStillImageOutput.swift */,
 			);
 			path = Deprecated;
+			sourceTree = "<group>";
+		};
+		8DF8B119235D9E7E0080573E /* Disguise */ = {
+			isa = PBXGroup;
+			children = (
+				8DF8B11A235D9EA90080573E /* _FakeImagePickerController.swift */,
+			);
+			path = Disguise;
+			sourceTree = "<group>";
+		};
+		8DF8B11C235D9EF50080573E /* Disguise */ = {
+			isa = PBXGroup;
+			children = (
+				8DF8B11D235D9F140080573E /* _FakeCaptureSession.swift */,
+				8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */,
+				8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */,
+			);
+			path = Disguise;
+			sourceTree = "<group>";
+		};
+		8DF8B125235DA3690080573E /* Disguise */ = {
+			isa = PBXGroup;
+			children = (
+				8DF8B126235DA3780080573E /* _FakeCaptureStillImageOutput.swift */,
+			);
+			path = Disguise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,13 +304,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF8B11B235D9EA90080573E /* _FakeImagePickerController.swift in Sources */,
 				8DCAFBBD2358051B00A7724C /* StopWatch.swift in Sources */,
 				8DE56328235A02510064EA1E /* FakeCaptureConnection.swift in Sources */,
 				8D4C6A2F2355414A00CF4E4E /* Misc.swift in Sources */,
 				8DB7C64E23571F060032238F /* FakeCaptureDeviceInput.swift in Sources */,
+				8DF8B11E235D9F140080573E /* _FakeCaptureSession.swift in Sources */,
+				8DF8B127235DA3780080573E /* _FakeCaptureStillImageOutput.swift in Sources */,
 				8DB7C64A2355D3F60032238F /* FakeCaptureOutput.swift in Sources */,
 				8DCAFC062359372500A7724C /* FakeCaptureDevice.swift in Sources */,
+				8DF8B122235DA29E0080573E /* _FakeCaptureConnection.swift in Sources */,
 				8D4C6A332355416F00CF4E4E /* FakeCaptureSession.swift in Sources */,
+				8DF8B120235DA0420080573E /* _FakeCaptureDevice.swift in Sources */,
 				8DE563262359B2040064EA1E /* FakeCaptureStillImageOutput.swift in Sources */,
 				8D2762A6235B47DD00E1E02E /* FakeImagePickerController.swift in Sources */,
 				8DCAFBBF2358054700A7724C /* VideoConverter.swift in Sources */,

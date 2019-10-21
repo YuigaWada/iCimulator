@@ -9,24 +9,14 @@
 import UIKit
 import AVFoundation
 
-
-open class FakeCMSampleBuffer: NSObject {
-    internal var spy: Data?
-    
-    internal init(spy: Data) {
-        self.spy = spy
-    }
-}
-
-
 /*
  AVCaptureStillImageOutput is deprecated,
  but many old libraries seem to be using these deprecated classes / methods so I've dicided to suppport.
  */
 
 //@available(iOS, deprecated: 10.0, message: "Use AVCapturePhotoOutput instead.")
-open class FakeCaptureStillImageOutput: FakeCaptureOutput {
-
+open class FakeCaptureStillImageOutput: _FakeCaptureStillImageOutput {
+    
     public override init() {
         
     }
@@ -60,16 +50,4 @@ open class FakeCaptureStillImageOutput: FakeCaptureOutput {
         return jpegSampleBuffer.spy
     }
     
-    open var outputSettings: [String : Any] = ["": ""]
-    open var availableImageDataCVPixelFormatTypes: [NSNumber] = [1.0]
-    open var availableImageDataCodecTypes: [AVVideoCodecType] = .init()
-    open var isStillImageStabilizationSupported: Bool = true
-    open var automaticallyEnablesStillImageStabilizationWhenAvailable: Bool = true
-    open var isStillImageStabilizationActive: Bool = true
-    open var isHighResolutionStillImageOutputEnabled: Bool = true
-    open var isCapturingStillImage: Bool = true
-
-    open var maxBracketedCaptureStillImageCount: Int = 20
-    open var isLensStabilizationDuringBracketedCaptureSupported: Bool = true
-    open var isLensStabilizationDuringBracketedCaptureEnabled = true
 }
