@@ -63,15 +63,7 @@ open class FakeCaptureOutput : NSObject {
 }
 
 
-
-open class _FakeCapturePhotoOutput: AVCapturePhotoOutput {
-    internal weak var session: FakeCaptureSession?
-    init(workaround _: Void = ()) {
-        
-    }
-}
-
-open class FakeCapturePhoto: AVCapturePhoto {
+open class FakeCapturePhoto: _FakeCapturePhoto {
     public var capturedImage: Data? = nil
     
     init(workaround _: Void = ()) {
@@ -92,11 +84,7 @@ open class FakeCapturePhotoOutput: _FakeCapturePhotoOutput {
         
     private lazy var photo = FakeCapturePhoto()
     
-    public init() {
-        super.init()
-    }
-    
-    public func capturePhoto(with settings: AVCapturePhotoSettings, delegate: FakeCapturePhotoCaptureDelegate) {
+    public override func capturePhoto(with settings: FakeCapturePhotoSettings, delegate: FakeCapturePhotoCaptureDelegate) {
         guard let session = self.session else {return}
         
         self.getCapturedImage(session: session)
@@ -108,6 +96,11 @@ open class FakeCapturePhotoOutput: _FakeCapturePhotoOutput {
         guard let main = session.mainCenter else {return}
         
         photo.capturedImage = main.captureImage()
+    }
+    
+    //Deprecated: iOS 10.0 - 11.0
+    open override class func jpegPhotoDataRepresentation(forJPEGSampleBuffer JPEGSampleBuffer: FakeCMSampleBuffer, previewPhotoSampleBuffer: FakeCMSampleBuffer?) -> Data? {
+        return JPEGSampleBuffer.spy
     }
     
 }
