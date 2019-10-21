@@ -26,7 +26,7 @@ open class _FakeCaptureStillImageOutput: FakeCaptureOutput {
 
 
 open class FakeCMSampleBuffer: NSObject {
-    internal var spy: Data?
+    internal var spy: Data? // Raw data of image
     
     internal init(spy: Data) {
         self.spy = spy

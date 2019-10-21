@@ -21,6 +21,8 @@ fileprivate typealias AVCaptureMovieFileOutput = FakeCaptureMovieFileOutput
 fileprivate typealias AVCaptureFileOutput = FakeCaptureFileOutput
 fileprivate typealias AVCaptureFileOutputRecordingDelegate = FakeCaptureFileOutputRecordingDelegate
 fileprivate typealias AVCaptureConnection = FakeCaptureConnection
+fileprivate typealias AVCapturePhotoSettings = FakeCapturePhotoSettings
+
 
 
 //UIImagePickerController

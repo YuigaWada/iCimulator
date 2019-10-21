@@ -982,8 +982,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "setupPreviewLayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -998,8 +998,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1030,8 +1030,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1046,8 +1046,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1062,8 +1062,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "FakeImagePickerController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1094,8 +1094,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "photoOutput(_:didFinishProcessingPhoto:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1110,8 +1110,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "photoOutput(_:didFinishProcessingPhoto:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1126,8 +1126,8 @@
             filePath = "iCimulator/UIImagePickerController/FakeImagePickerController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "photoOutput(_:didFinishProcessingPhoto:error:)"
             landmarkType = "7">
          </BreakpointContent>

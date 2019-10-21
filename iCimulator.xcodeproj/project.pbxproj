@@ -27,6 +27,9 @@
 		8DF8B120235DA0420080573E /* _FakeCaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */; };
 		8DF8B122235DA29E0080573E /* _FakeCaptureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */; };
 		8DF8B127235DA3780080573E /* _FakeCaptureStillImageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B126235DA3780080573E /* _FakeCaptureStillImageOutput.swift */; };
+		8DF8B129235DA7AB0080573E /* _FakeCaptureSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B128235DA7AB0080573E /* _FakeCaptureSettings.swift */; };
+		8DF8B12B235DA9880080573E /* FakeCapturePhotoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B12A235DA9880080573E /* FakeCapturePhotoSettings.swift */; };
+		8DF8B12D235DDD740080573E /* _FakeCapturePhotoOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8B12C235DDD740080573E /* _FakeCapturePhotoOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureDevice.swift; sourceTree = "<group>"; };
 		8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureConnection.swift; sourceTree = "<group>"; };
 		8DF8B126235DA3780080573E /* _FakeCaptureStillImageOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureStillImageOutput.swift; sourceTree = "<group>"; };
+		8DF8B128235DA7AB0080573E /* _FakeCaptureSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCaptureSettings.swift; sourceTree = "<group>"; };
+		8DF8B12A235DA9880080573E /* FakeCapturePhotoSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCapturePhotoSettings.swift; sourceTree = "<group>"; };
+		8DF8B12C235DDD740080573E /* _FakeCapturePhotoOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FakeCapturePhotoOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 				8DCAFC052359372500A7724C /* FakeCaptureDevice.swift */,
 				8DE56327235A02510064EA1E /* FakeCaptureConnection.swift */,
 				8D4C6A2C23553DDB00CF4E4E /* iCimulatorFoundation.swift */,
+				8DF8B12A235DA9880080573E /* FakeCapturePhotoSettings.swift */,
 				8DE563242359B1F50064EA1E /* Deprecated */,
 			);
 			path = Foundation;
@@ -181,6 +188,8 @@
 				8DF8B11D235D9F140080573E /* _FakeCaptureSession.swift */,
 				8DF8B11F235DA0420080573E /* _FakeCaptureDevice.swift */,
 				8DF8B121235DA29E0080573E /* _FakeCaptureConnection.swift */,
+				8DF8B128235DA7AB0080573E /* _FakeCaptureSettings.swift */,
+				8DF8B12C235DDD740080573E /* _FakeCapturePhotoOutput.swift */,
 			);
 			path = Disguise;
 			sourceTree = "<group>";
@@ -311,15 +320,18 @@
 				8DB7C64E23571F060032238F /* FakeCaptureDeviceInput.swift in Sources */,
 				8DF8B11E235D9F140080573E /* _FakeCaptureSession.swift in Sources */,
 				8DF8B127235DA3780080573E /* _FakeCaptureStillImageOutput.swift in Sources */,
+				8DF8B12D235DDD740080573E /* _FakeCapturePhotoOutput.swift in Sources */,
 				8DB7C64A2355D3F60032238F /* FakeCaptureOutput.swift in Sources */,
 				8DCAFC062359372500A7724C /* FakeCaptureDevice.swift in Sources */,
 				8DF8B122235DA29E0080573E /* _FakeCaptureConnection.swift in Sources */,
 				8D4C6A332355416F00CF4E4E /* FakeCaptureSession.swift in Sources */,
 				8DF8B120235DA0420080573E /* _FakeCaptureDevice.swift in Sources */,
 				8DE563262359B2040064EA1E /* FakeCaptureStillImageOutput.swift in Sources */,
+				8DF8B129235DA7AB0080573E /* _FakeCaptureSettings.swift in Sources */,
 				8D2762A6235B47DD00E1E02E /* FakeImagePickerController.swift in Sources */,
 				8DCAFBBF2358054700A7724C /* VideoConverter.swift in Sources */,
 				8D4C6A2D23553DDB00CF4E4E /* iCimulatorFoundation.swift in Sources */,
+				8DF8B12B235DA9880080573E /* FakeCapturePhotoSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
