@@ -13,7 +13,6 @@
 
 iCimulator allows us to use camera functions on iOS Simulator!
 
-(Without any changes in your code😊)
 
 <!-- (日本語は[こちら](https://qiita.com/yuwd/items/)) -->
 
@@ -131,6 +130,9 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
     public typealias AVCaptureFileOutput = FakeCaptureFileOutput
     public typealias AVCaptureFileOutputRecordingDelegate = FakeCaptureFileOutputRecordingDelegate
     public typealias AVCaptureConnection = FakeCaptureConnection
+    public typealias AVCapturePhotoSettings = FakeCapturePhotoSettings
+    public typealias AVCaptureResolvedPhotoSettings = FakeCaptureResolvedPhotoSettings
+
 
     //For supporting iOS 10.
     public typealias AVCaptureStillImageOutput = FakeCaptureStillImageOutput
@@ -143,6 +145,20 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
 
 
 ```
+
+<br><br>
+
+## Demo
+
+### [```CameraKit```](https://github.com/CameraKit/camerakit-ios)
+
+<img src="resources/demo_CameraKit.gif" width=50%>
+
+<br><br>
+
+### [```Fusuma```](https://github.com/ytakzk/Fusuma)
+
+<img src="resources/demo_Fusuma.gif" width=50%>
 
 <br><br>
 
