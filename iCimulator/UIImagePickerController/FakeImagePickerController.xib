@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="cameraView" destination="gem-Sb-efM" id="D6l-8P-wLp"/>
                 <outlet property="shotButton" destination="fHd-x8-ZMO" id="2Cq-es-RA0"/>
+                <outlet property="shotButtonAcs1" destination="08L-zy-TQk" id="YX9-Dx-FkS"/>
+                <outlet property="shotButtonAcs2" destination="kJo-op-bRf" id="FUb-bq-FRu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -120,7 +122,7 @@
                 <constraint firstItem="lgp-Iv-5sj" firstAttribute="top" secondItem="ae8-S4-sGz" secondAttribute="bottom" id="9eB-t7-fdv"/>
                 <constraint firstItem="gem-Sb-efM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="D3k-dN-vTy"/>
                 <constraint firstItem="bwA-su-RVA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HMc-Ot-nRt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="ae8-S4-sGz" secondAttribute="bottom" constant="-818" id="Htu-Rv-av5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ae8-S4-sGz" secondAttribute="bottom" id="Htu-Rv-av5"/>
                 <constraint firstItem="lgp-Iv-5sj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lro-YG-BLf"/>
                 <constraint firstItem="gem-Sb-efM" firstAttribute="top" secondItem="bwA-su-RVA" secondAttribute="bottom" id="OaZ-Hs-xeE"/>
                 <constraint firstAttribute="trailing" secondItem="lgp-Iv-5sj" secondAttribute="trailing" id="UyY-Hb-mga"/>

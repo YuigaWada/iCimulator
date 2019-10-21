@@ -28,6 +28,8 @@ open class FakeImagePickerController: UINavigationController, AVCapturePhotoCapt
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var shotButton: UIView!
+    @IBOutlet weak var shotButtonAcs1: UIView!
+    @IBOutlet weak var shotButtonAcs2: UIView!
     
     private var captureSession = AVCaptureSession()
     private var mainCamera: AVCaptureDevice?
@@ -39,6 +41,8 @@ open class FakeImagePickerController: UINavigationController, AVCapturePhotoCapt
     
     private var photoOutput : AVCapturePhotoOutput?
     private weak var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
+    
+
     
     
     private lazy var bundle = Bundle(for: FakeImagePickerController.self)
@@ -74,6 +78,11 @@ open class FakeImagePickerController: UINavigationController, AVCapturePhotoCapt
         setupTapGesture()
     }
     
+    override open func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        updateShotButton()
+    }
     
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -148,6 +157,12 @@ open class FakeImagePickerController: UINavigationController, AVCapturePhotoCapt
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGesture(_:)))
         tapGestureRecognizer.delegate = self
         self.shotButton.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func updateShotButton() {
+        shotButton.layer.cornerRadius = shotButton.layer.frame.width / 2
+        shotButtonAcs1.layer.cornerRadius = shotButtonAcs1.layer.frame.width / 2
+        shotButtonAcs2.layer.cornerRadius = shotButtonAcs2.layer.frame.width / 2
     }
     
     
