@@ -27,7 +27,7 @@ import os
 import sys
 import shutil
 
-patterns = [['/\\*[\\s\\S]*?\\*/|//.*',''] , ['//.+\n',''] , ['\s+\n', '\n']]
+patterns = [['/\\*[\\s\\S]*?\\*/|//.*',''] , ['//.+\n',''] , ['@available.+\n',''] , ['\s+\n', '\n']]
 
 def load_argument():
     arguments = sys.argv
