@@ -124,6 +124,7 @@
 				8D2762A4235B479C00E1E02E /* UIImagePickerController */,
 				8DCE32F9235B311F00D9ECE8 /* Foundation */,
 				8DCAFBBB2358050600A7724C /* Utilities */,
+				8D4C6A2C23553DDB00CF4E4E /* iCimulatorFoundation.swift */,
 				8D4C6A1523553DC800CF4E4E /* iCimulator.h */,
 				8D4C6A1623553DC800CF4E4E /* Info.plist */,
 			);
@@ -158,7 +159,6 @@
 				8DB7C64D23571F060032238F /* FakeCaptureDeviceInput.swift */,
 				8DCAFC052359372500A7724C /* FakeCaptureDevice.swift */,
 				8DE56327235A02510064EA1E /* FakeCaptureConnection.swift */,
-				8D4C6A2C23553DDB00CF4E4E /* iCimulatorFoundation.swift */,
 				8DF8B12A235DA9880080573E /* FakeCapturePhotoSettings.swift */,
 				8DE563242359B1F50064EA1E /* Deprecated */,
 			);
