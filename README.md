@@ -15,7 +15,7 @@ iCimulator allows us to use camera functions on iOS Simulator!
 
 2019-Oct-23: **A new mode 'Mac Camera Mode' is added!**
 
-→Click [here](/#Usage) for details!
+→Click [here](#usage---mac-camera--) for details!
 <!-- (日本語は[こちら](https://qiita.com/yuwd/items/)) -->
 
 <br>
@@ -75,7 +75,7 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
 |:-----------|------------:|:------------:|
 | Type | Image | You can set an image as a mock |
 |  | Video | You can set a video as a mock |
-|  | Mac-Camera | Click [here](/#Usage) for details! |
+|  | Mac-Camera | Click [here](#usage---mac-camera--) for details! |
 |  |  |  |
 | Argument | ... | Write here path of your mock data |
 
