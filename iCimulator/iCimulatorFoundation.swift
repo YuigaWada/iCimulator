@@ -44,6 +44,11 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
     }
     
     deinit {
+        
+        if #available(iOS 12, *) {
+            ipc.detachConnection()
+        }
+        
         print("deinit")
     }
     
@@ -126,9 +131,10 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
     private func generateMacCameraLayer() {
         if #available(iOS 12, *) {
             self.ipc = InterProcessCommunicator()
-            self.ipc.connect() { image in
+            self.ipc.connect() { [weak self] image in
                 DispatchQueue.main.async {
-                    self.contents = image.cgImage // Must be executed on main thread !
+                    guard let _ = self else { return }
+                    self!.contents = image.cgImage // Must be executed on main thread !
                 }
             }
         }
