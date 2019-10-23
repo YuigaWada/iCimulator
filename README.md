@@ -163,7 +163,15 @@ Open ```streaming_server``` and launch ```streaming_server/server.py```!
 
 After checking your ```iCimulator.plist```, you can see that your MacBook Camera is displayed on iOS Simulator 😊
 
-<br>
+
+### Dependencies
+
+- Python 3.7.3
+- Numpy
+- opencv-python
+
+
+### Options
 
 You can use these options in using ```streaming_server/server.py```.
 ```
@@ -188,7 +196,6 @@ ___________________________________________________________________________
 -c / -camera / --camera : enable you to show the captured frame on another window.
 
 ````
-
 
 <br><br>
 
