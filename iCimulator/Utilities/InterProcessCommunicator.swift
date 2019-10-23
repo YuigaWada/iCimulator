@@ -12,8 +12,10 @@ import Network
 @available(iOS 12, *)
 internal class InterProcessCommunicator {
     private var connection: NWConnection?
-    private var images: [UIImage] = []
+    private var savedImages: [UIImage] = []
     private var tempImage: Data?
+    
+    private var isRecording: Bool = false
     
     internal func connect(_  handler: @escaping (UIImage)->Void) {
         let myQueue = DispatchQueue.global()
@@ -22,18 +24,18 @@ internal class InterProcessCommunicator {
             let listener = try NWListener(using: .udp, on: 5005)
             listener.newConnectionHandler = {  (newConnection) in
                 // Handle inbound connections
-                print("connection ok")
+                print("iCimulator: UDP connection is ok")
                 
                 newConnection.start(queue: myQueue)
                 self.receive(on: newConnection, handler: handler)
             }
-            print("listener start")
+            print("iCimulator: listener starts")
             listener.start(queue: .global())
         }
         catch {
             print(error)
         }
-        print("end")
+        print("iCimulator: UDP connection ends")
     }
 
 
@@ -45,7 +47,7 @@ internal class InterProcessCommunicator {
             if data.count != 1 {
                 if let _ = self.tempImage {
                     self.tempImage!.append(data)
-                    print(self.tempImage!.count)
+//                    print(self.tempImage!.count)
                 }
                 else {
                     self.tempImage = data
@@ -55,14 +57,26 @@ internal class InterProcessCommunicator {
                 guard let tempImage = self.tempImage, let image = UIImage(data: tempImage)
                     else { self.receive(on: connection, handler: handler); return }
                 
-                self.images.append(image)
+                if self.isRecording { self.savedImages.append(image) } // Saves each images if recording was started.
                 handler(image) // Updates contents of FakePreviewLayer.
                 
                 self.tempImage = nil
             }
             
             self.receive(on: connection, handler: handler)
-            print("Received Message: \(data)")
+//            print("Received Message: \(data)")
         }
+    }
+    
+    internal func startRecording() {
+        self.isRecording = true
+    }
+    
+    internal func stopRecording()-> [UIImage] {
+        let images = savedImages // In theory, savedImages is deep-copied.
+        
+        savedImages = []
+        self.isRecording = false
+        return images
     }
 }

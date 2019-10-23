@@ -129,6 +129,10 @@ internal class VideoConverter {
         let imageCount = Int(fps) * seconds //fps (frame/s) * t (s)
         let duplicatedImages = image.duplicate(count: imageCount)
         
+        self.fromImages(images: duplicatedImages, completion)
+    }
+    
+    internal func fromImages(images: [UIImage], _ completion: @escaping UrlFunction) {
         guard let assetWriter = try? AVAssetWriter(outputURL: url, fileType: AVFileType.mov)
             else { fatalError("iCimulator: AVAssetWriter error") }
         
@@ -147,7 +151,7 @@ internal class VideoConverter {
         videoWriter!.startSession(atSourceTime: CMTime.zero)
         
         frameCount = 0
-        for image in duplicatedImages {
+        for image in images {
             var buffer: CVPixelBuffer?
             guard adaptor.assetWriterInput.isReadyForMoreMediaData else { return }
             

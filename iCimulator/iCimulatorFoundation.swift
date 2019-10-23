@@ -238,6 +238,22 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
     }
     
     
+    private func createVideoFromMacCamera(completion: @escaping UrlFunction) {
+        if #available(iOS 12, *) {
+            let images = ipc.stopRecording()
+            let videoConvertor = VideoConverter()
+            
+            videoConvertor.fromImages(images: images, completion)
+        } else {
+            // Fallback on earlier versions
+            fatalError("iCimulator: MacCamera Mode requires iOS 12.0")
+        }
+
+    }
+    
+    
+
+    
     //-MARK: Communicating Method
     internal func captureImage()-> Data {
         guard let previewType = self.previewType else { fatalError("Unknown Type. (written on iCimulator.plist)") }
@@ -252,7 +268,7 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
         case .Adhoc:
             fatalError("iCimulator: Adhoc Mode has not been developed...")
         case .MacCamera:
-            fatalError("iCimulator: MacCamera Mode has not been developed...")
+            return captureStaticImage()
         }
         
         fatalError("iCimulator: Internal Error...")
@@ -272,11 +288,21 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
         case .Adhoc:
             fatalError("iCimulator: Adhoc Mode has not been developed...")
         case .MacCamera:
-            fatalError("iCimulator: MacCamera Mode has not been developed...")
+            if #available(iOS 12, *) {
+                ipc.startRecording()
+            } else {
+                // Fallback on earlier versions
+                fatalError("iCimulator: MacCamera Mode requires iOS 12.0")
+            }
         }
     }
     
     internal func stopRecording(_ completion: @escaping UrlFunction) {
+        if previewType == .MacCamera {
+            createVideoFromMacCamera(completion: completion)
+            return
+        }
+        
         guard let interval = stopWatch.stop() else { fatalError("iCimulator: StopWatch is not working properly.") }
         let interval64 = Int(interval)
         
@@ -289,15 +315,13 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
             fatalError("Deprecated.")
         case .Adhoc:
             fatalError("iCimulator: Adhoc Mode has not been developed...")
-        case .MacCamera:
-            fatalError("iCimulator: MacCamera Mode has not been developed...")
         case .none:
+            fatalError("iCimulator: Internal Error...")
+        case .MacCamera:
             fatalError("iCimulator: Internal Error...")
         }
     }
 
-    
-    
     
     
     
