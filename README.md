@@ -13,10 +13,12 @@
 
 iCimulator allows us to use camera functions on iOS Simulator!
 
+2019-Oct-23: **A new mode 'Mac Camera Mode' is added!**
 
+→Click [here](/#Usage) for details!
 <!-- (日本語は[こちら](https://qiita.com/yuwd/items/)) -->
 
-<br><br>
+<br>
 
 Support for **AVFoundation** & **UIImagePickerController** !
 
@@ -42,7 +44,7 @@ github "YuigaWada/iCimulator"
 
 <br><br>
 
-## Usage 🍏
+## Usage🍏 - Image or Video -  
 **Just 5 steps!**
 
 0. Prepare your mock data. (image/video)
@@ -73,6 +75,7 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
 |:-----------|------------:|:------------:|
 | Type | Image | You can set an image as a mock |
 |  | Video | You can set a video as a mock |
+|  | Mac-Camera | Click [here](/#Usage) for details! |
 |  |  |  |
 | Argument | ... | Write here path of your mock data |
 
@@ -145,6 +148,47 @@ You can copy ```iCimulator.swift``` and ```iCimulator.plist``` from ```template`
 
 
 ```
+
+<br><br>
+
+## Usage🍎 - Mac Camera -  
+
+**You can use your macbook camera to simulate camera functions!!**
+
+First, you need to launch a camera-server on your MacBook.
+
+Open ```streaming_server``` and launch ```streaming_server/server.py```!
+
+<br>
+
+After checking your ```iCimulator.plist```, you can see that your MacBook Camera is displayed on iOS Simulator 😊
+
+<br>
+
+You can use these options in using ```streaming_server/server.py```.
+```
+
+___________________________________________________________________________
+
+
+██╗ ██████╗██╗███╗   ███╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗
+██║██╔════╝██║████╗ ████║██║   ██║██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗
+██║██║     ██║██╔████╔██║██║   ██║██║     ███████║   ██║   ██║   ██║██████╔╝
+██║██║     ██║██║╚██╔╝██║██║   ██║██║     ██╔══██║   ██║   ██║   ██║██╔══██╗
+██║╚██████╗██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║
+╚═╝ ╚═════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+
+                                                            by Yuiga Wada.
+___________________________________________________________________________
+
+-v / -verbose / --verbose : turn on Verbose Mode.
+
+-h / -help / --help : show help.
+
+-c / -camera / --camera : enable you to show the captured frame on another window.
+
+````
+
 
 <br><br>
 
