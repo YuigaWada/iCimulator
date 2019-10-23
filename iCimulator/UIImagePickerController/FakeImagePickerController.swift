@@ -42,7 +42,7 @@ open class FakeImagePickerController: _FakeImagePickerController, AVCapturePhoto
     private var isRecording: Bool = false
     
     private var photoOutput : AVCapturePhotoOutput?
-    private weak var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
+    private var cameraPreviewLayer : AVCaptureVideoPreviewLayer?
     
 
 

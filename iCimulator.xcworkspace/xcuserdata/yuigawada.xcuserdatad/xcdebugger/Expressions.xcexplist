@@ -3,18 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ViewController.setupPreviewLayer():ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.cameraPreviewLayer">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "ViewController.fileOutput(_:didFinishRecordingTo:from:error:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "outputFileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FakePreviewLayer.init():FakePreviewLayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "previewType">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,6 +70,9 @@
          <PersistentStrings>
             <PersistentString
                value = "self.cameraView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "cameraPreviewLayer">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -168,18 +171,18 @@
          contextName = "ViewController.tappedChangeButton(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "titleLabel.text">
+               value = "self.isVideoMode">
             </PersistentString>
             <PersistentString
-               value = "self.isVideoMode">
+               value = "titleLabel.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FakePreviewLayer.init():FakePreviewLayer.swift">
+         contextName = "ViewController.setupPreviewLayer():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "previewType">
+               value = "self.cameraPreviewLayer">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
