@@ -1,0 +1,11 @@
+
+
+
+-v / -verbose / --verbose : turn on Verbose Mode.
+
+-h / -help / --help : show help.
+
+-c / -camera / --camera : enable you to show the captured frame on another window.
+
+
+

@@ -25,6 +25,10 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
     private var stopWatch: StopWatch = StopWatch()
     private var recordingStartTime: CMTime?
     
+    @available(iOS 12 , *)
+    private lazy var ipc = InterProcessCommunicator()
+    
+    
     public override func layoutSublayers() {
         super.layoutSublayers()
         
@@ -73,8 +77,7 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
             fatalError("Failed to read plist: \(e)")
         }
     }
-    
-    
+
     //-MARK: Generating Fake Layer
     private func generateFakeLayer() {
         guard let previewType = self.previewType else { fatalError("Unknown Type. (written on iCimulator.plist)") }
@@ -90,10 +93,10 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
             fatalError("Deprecated.")
             
         case .MacCamera:
-            print("debug")
+            self.generateMacCameraLayer()
                     
         case .Adhoc:
-            print("debug")
+            fatalError("iCimulator: Adhoc Mode has not been developed...")
         }
     }
     
@@ -118,6 +121,21 @@ open class iCimulatorFoundation: CALayer { //** MAIN CLASS **//
         self.addSublayer(playerLayer!)
         self.avQueuePlayer!.play()
         //if loop { self.avPlayer!.automateLoop() }
+    }
+    
+    private func generateMacCameraLayer() {
+        if #available(iOS 12, *) {
+            self.ipc = InterProcessCommunicator()
+            self.ipc.connect() { image in
+                DispatchQueue.main.async {
+                    self.contents = image.cgImage // Must be executed on main thread !
+                }
+            }
+        }
+        else {
+            // Fallback on earlier versions
+            fatalError("iCimulator: MacCamera Mode requires iOS 12.0")
+        }
     }
     
     

@@ -12,11 +12,8 @@ import AVFoundation
 
 class iCimulatorTests: XCTestCase {
 
-    private var layerInstance: FakePreviewLayer?
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        layerInstance = FakePreviewLayer()
     }
 
     override func tearDown() {
