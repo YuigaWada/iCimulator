@@ -35,6 +35,11 @@ dirname = os.path.dirname(os.path.abspath(__file__)) + '/resources/'
 verbose = False
 camera_mode = False
 
+UDP_IP = '127.0.0.1'
+UDP_PORT = 5005
+MAX_PACKET = 9216 # This value depends on your environment.
+
+
 def launch_logo():
     with open(dirname + 'sprash.txt','r') as file:
         logo = file.read()
@@ -86,9 +91,6 @@ def load_argument():
 
 
 def capture():
-    UDP_IP = '127.0.0.1'
-    UDP_PORT = 5005
-    MAX_PACKET = 9216
 
     cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
@@ -124,7 +126,14 @@ def capture():
     cv2.destroyAllWindows()
 
 
+def get_max_packet():
+    with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as sock:
 
+        for i in range(9216, 100000):
+            try:
+                sock.sendto(b"a" * i, (UDP_IP, UDP_PORT))
+            except:
+                return i - 1
 
 
 
@@ -132,7 +141,11 @@ def main():
     launch_logo()
     load_argument()
 
-    print('\nIf you need some help, use command \'-h\'. \n\nRunning...')
+    print('\nIf you need some help, use command \'-h\'. \n\nChecking your environment...')
+
+    MAX_PACKET = get_max_packet()
+    print('The maximum length of data that can be sent over UDP is ' + str(MAX_PACKET) + ' bytes. \n\nRunning...')
+
     capture()
 
 
