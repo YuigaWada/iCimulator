@@ -147,7 +147,7 @@ open class FakeImagePickerController: _FakeImagePickerController, AVCapturePhoto
     
     func setupPreviewLayer() {
         self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resize
+        self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
     
         self.cameraPreviewLayer?.frame = CGRect(x: 0, y: 0, width: self.cameraView.frame.width, height: self.cameraView.frame.height)
