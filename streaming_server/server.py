@@ -37,7 +37,9 @@ camera_mode = False
 
 def launch_logo():
     with open(dirname + 'sprash.txt','r') as file:
-        print(file.read())
+        logo = file.read()
+        print(logo.replace('█', '\033[94m' + '█' + '\033[0m'))
+
 
 def verbose_print(text):
     if verbose:
@@ -61,7 +63,7 @@ def load_argument():
         print(' ~ verbose mode ~ ')
 
     def camera_on():
-        global camera_on
+        global camera_mode
 
         camera_mode = True
         print(' ~ camera mode ~ ')
