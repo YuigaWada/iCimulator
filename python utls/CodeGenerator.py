@@ -43,20 +43,20 @@ class Shaper: # Just Shape.
 
 
     def shape(self):
-        file = open(self.target_path)
-        raw_text = file.read()
+        with open(self.target_path) as file:
+            raw_text = file.read()
 
-        for pattern, result in self.patterns:
-            raw_text = re.sub(pattern, result, raw_text,flags=re.MULTILINE)
+            for pattern, result in self.patterns:
+                raw_text = re.sub(pattern, result, raw_text,flags=re.MULTILINE)
 
-        return raw_text
+            return raw_text
 
 
     def write(self, shaped_text):
         self.create_backup(shaped_text)
 
-        file = open(self.target_path, mode='w')
-        file.write(shaped_text)
+        with open(self.target_path, mode='w') as file:
+            file.write(shaped_text)
 
 
     def create_backup(self, text):
