@@ -27,6 +27,8 @@ import io
 import math
 import sys
 import os
+import pandas as pd
+
 
 from PIL import Image
 
@@ -39,7 +41,10 @@ UDP_IP = '127.0.0.1'
 UDP_PORT = 5005
 MAX_PACKET = 9216 # This value depends on your environment.
 
+screen_size = (414,896) # default
 
+
+# Utility
 def launch_logo():
     with open(dirname + 'sprash.txt','r') as file:
         logo = file.read()
@@ -59,7 +64,22 @@ def image_to_bytes(image: Image):
   imgByteArr = imgByteArr.getvalue()
   return imgByteArr
 
+def crop_image(image: Image):
+    center_x = int(image.width / 2)
+    center_y = int(image.height / 2)
+
+    screen_width = screen_size[0]
+    screen_height = screen_size[1]
+
+    left_upper = (center_x - int(screen_width / 2), center_y - int(screen_height / 2))
+    right_lower = (center_x + int(screen_width / 2), center_y + int(screen_height / 2))
+
+    return image.crop(left_upper + right_lower)
+
+# Main Cycle
+
 def load_argument():
+    global screen_size
 
     def verbose_on():
         global verbose
@@ -89,14 +109,26 @@ def load_argument():
                 if argument == format + target_argument or argument == format + target_argument[0]:
                     function()
 
+    #For Changing Screen Size.
+    print('Checking the screen size of iOS Simulator...')
+    display_sizes = pd.read_csv(dirname + 'displays.csv')
+    for row in display_sizes.itertuples():
+
+        device_name = row.device
+        target_argument = [device_name, 'iphone' + device_name]
+
+        for argument in map(lambda arg: arg.lower(), arguments):
+            if argument in target_argument:
+                screen_size = (row.width, row.height)
+                print('Screen Size: ' + str(screen_size[0]) + 'x' + str(screen_size[1]))
+                return
+
+    print('Screen Size: ' + str(screen_size[0]) + 'x' + str(screen_size[1]))
+
 
 def capture():
 
     cap = cv2.VideoCapture(0)
-    ret, frame = cap.read()
-
-    if camera_mode:
-        cv2.imshow('frame',frame)
 
     while(True):
         ret, frame = cap.read()
@@ -105,7 +137,9 @@ def capture():
             cv2.imshow('frame',frame)
 
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+
         image = Image.fromarray(organize_color(frame))
+        image = crop_image(image)
         raw_data = image_to_bytes(image)
         verbose_print('\nCaptured: ImageSize → ' + str(len(raw_data)))
 

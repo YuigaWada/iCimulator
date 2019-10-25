@@ -7,5 +7,5 @@
 
 -c / -camera / --camera : enable you to show the captured frame on another window.
 
-
+iPhone~~ : set up the screen size of captured frame. (ex→ iPhoneXS, iphone6 ... )
 
