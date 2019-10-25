@@ -169,6 +169,8 @@ After checking your ```iCimulator.plist```, you can see that your MacBook Camera
 - Python 3.7.3
 - Numpy
 - opencv-python
+- Pillow
+- Pandas
 
 
 ### Options
